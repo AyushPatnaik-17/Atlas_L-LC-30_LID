@@ -5,7 +5,7 @@ using Microsoft.MixedReality.Toolkit;
 public class SequentialAnimation : MonoBehaviour
 {
     //public GameObject elbowScrews;
-    public GameObject elbowAssembly;
+    //public GameObject elbowAssembly;
     public GameObject topScrews;
     public GameObject separationPlate;
     public GameObject Pin;
@@ -14,7 +14,7 @@ public class SequentialAnimation : MonoBehaviour
     public float RotationValue = 135f;
 
     //private Vector3 _elbowScrewsStartPos;
-    private Vector3 _elbowAssemblyStartPos;
+    //private Vector3 _elbowAssemblyStartPos;
     private Vector3 _topScrewsStartPos;
     private Vector3 _pinStartPos;
     private Quaternion _separationPlateStartRot;
@@ -26,7 +26,7 @@ public class SequentialAnimation : MonoBehaviour
     void Start()
     {
         //_elbowScrewsStartPos = elbowScrews.transform.localPosition;
-        _elbowAssemblyStartPos = elbowAssembly.transform.localPosition;
+        //_elbowAssemblyStartPos = elbowAssembly.transform.localPosition;
         _topScrewsStartPos = topScrews.transform.localPosition;
         _separationPlateStartRot = separationPlate.transform.localRotation;
         _pinStartPos = Pin.transform.localPosition;
@@ -46,7 +46,7 @@ public class SequentialAnimation : MonoBehaviour
 
         //yield return MoveAndDisappear(elbowScrews, new Vector3(0.7f, 0f, 0f), 2f);
 
-        yield return MoveAndDisappear(elbowAssembly, new Vector3(0f, 2.5f, 0f), 3f);
+        //yield return MoveAndDisappear(elbowAssembly, new Vector3(0f, 2.5f, 0f), 3f);
 
         yield return MoveAndDisappear(topScrews, new Vector3(0f, 0f, 0.8f), 3f);
 
@@ -98,14 +98,14 @@ public class SequentialAnimation : MonoBehaviour
 
         //StopCoroutine(_sequence);
         //elbowScrews.transform.localPosition = _elbowScrewsStartPos;
-        elbowAssembly.transform.localPosition = _elbowAssemblyStartPos;
+        //elbowAssembly.transform.localPosition = _elbowAssemblyStartPos;
         topScrews.transform.localPosition = _topScrewsStartPos;
         Pin.transform.localPosition = _pinStartPos;
         separationPlate.transform.localRotation = _separationPlateStartRot;
 
 
         //elbowScrews.SetActive(true);
-        elbowAssembly.SetActive(true);
+        //elbowAssembly.SetActive(true);
         topScrews.SetActive(true);
         Pin.SetActive(true);
     }
